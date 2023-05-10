@@ -4,13 +4,8 @@
 // @import 'reset/normalize';
 @import 'components/buttons';
 @import 'layouts/header';
+@import 'components/popup';
 @import 'layouts/footer';
-
-.container {
-  @include mobile() {
-    padding: 30px 20px;
-  }
-}
 
 .header {
   height: 120px;
@@ -21,8 +16,7 @@
   &__container {
 
     @include tablet() {
-      padding: 30px 40px;
-
+      padding: 0px 30px;
     }
 
     @include mobile() {
@@ -45,31 +39,94 @@
   .header__burger-icon {
     filter: invert(0%) sepia(0%) saturate(20%) hue-rotate(357deg) brightness(0%) contrast(104%);
   }
-
-
-
 }
 
 .friends {
   background: $bgcolor5_pets;
 
+  &__arrow-start, &__arrow-end, &__arrow-prev, &__arrow-next {
+    cursor: pointer;
+  }
+
   &__container {
-    display: flex;
+    width: 100vw;
+    @include flex(center, center, column);
+    text-align: center;
+    gap: 43px;
+    padding-bottom: 75px;
 
     @include tablet() {
       gap: 30px;
     }
+
+    @include mobile() {
+      padding-bottom: 43px;
+      gap: 40px;
+    }
+  }
+
+  &__cards-box {
+    height: 930px;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+
+    @include tablet() {
+      height: 1365px;
+    }
+
+    @include mobile() {
+      height: 1365px;
+    }
+  }
+
+  &__slider {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
   }
 
   &__slider-page {
-    row-gap: 30px;
-    column-gap: 40px;
-    flex-wrap: wrap;
+    row-gap: 45px;
+    column-gap: 0px;
+    display: grid;
+    justify-items: center;
+    width: 100vw;
+
+    @include tablet() {
+      row-gap: 30px;
+      padding: 0 70px;
+      // grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile() {
+      row-gap: 31px;
+      // padding: 0 25px;
+      // grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__card {
     background-color: #FAFAFA;
     padding-bottom: 45px;
+    @include flex(center, center, column);
+    gap: 30px;
+    width: 270px;
+    @include text();
+    @include caption();
+    padding-bottom: 30px;
+    background: #FAFAFA;
+
+    .button-link {
+      border: 2px solid #F1CDB3;
+      background: none;
+    }
+
+
+    @include mobile() {
+      background: #FAFAFA;
+      padding-bottom: 30px;
+    }
   }
 
   .button-link {
@@ -96,17 +153,20 @@
       border-radius: 50%;
       height: 52px;
       width: 52px;
+      background-color: inherit;
+      font-size: 15px;
     }
-
+    
     &__item:nth-of-type(3) {
       background-color: $button-border-pets;
     }
-
-    &__forward-start,
+    
+    &__arrow-start,
     &__page-prev {
       transform: rotate(180deg);
       color: #CDCDCD;
     }
+    
   }
 
   &__card:nth-child(3) {
@@ -169,6 +229,26 @@
       display: none;
     }
   }
+
+  .fade-in-right {
+    animation: fadeInFromRight 700ms ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  .fade-to-left {
+    animation: fadeOutToLeft 700ms ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  .fade-in-left {
+    animation: fadeInFromLeft 700ms ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  .fade-to-right {
+    animation: fadeOutToRight 700ms ease-in-out;
+    animation-fill-mode: forwards;
+  }
 }
 
 .footer {
@@ -179,7 +259,7 @@
       justify-content: center;
       row-gap: 45px;
       column-gap: 60px;
-      padding: 7px 64px 0 64px;
+      padding: 30px 64px 0 64px;
     }
   }
 

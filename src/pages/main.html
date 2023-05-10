@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="dist/main.css">
+  <link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
   <div id="root">
 
-    <section class="intro section">
+    <section id="about" class="intro section">
       <div class="intro__container container">
         <div class="intro__text section__text">
           <h2 class="intro__heading section__heading">Not only people <br> need a house</h2>
@@ -50,41 +50,28 @@
       </div>
     </section>
 
-    <section class="friends section">
+    <section id="friends" class="friends section">
       <div class="friends__container container">
         <h3 class="friends__heading section__heading">Our friends who <br> are looking for a house</h3>
         <div class="friends__cards-box">
-          <img class="friends__arrow friends__arrow-desktop" src="./assets/svg/arrow-right.svg" alt="arrow-right">
+          <img class="friends__arrow  friends__arrow-desktop friends__arrow-left" src="./assets/svg/arrow-left.svg" alt="arrow-left">
           <div class="friends__slider slider">
-            <div class="friends__slider-page">
-              <div class="friends__card slider__card">
-                <img src="./assets/img/pets-katrine.png" alt="">
-                <p class="slider-card__name">Katrine</p>
-                <a class="slider-card__button button-link" href="#">Learn more</a>
-              </div>
-              <div class="friends__card slider__card">
-                <img src="./assets/img/pets-jennifer.png" alt="">
-                <p class="slider-card__name">Jennifer</p>
-                <a class="slider-card__button button-link" href="#">Learn more</a>
-              </div>
-              <div class="friends__card slider__card">
-                <img src="./assets/img/pets-woody.png" alt="">
-                <p class="slider-card__name">Woody</p>
-                <a class="slider-card__button button-link" href="#">Learn more</a>
-              </div>
-            </div>
+            <!-- <div class="friends__slider-page">
+            </div> -->
+            <div class="overlay"></div>
           </div>
-          <img class="friends__arrow  friends__arrow-desktop" src="./assets/svg/arrow-left.svg" alt="arrow-left">
+          
+          <img class="friends__arrow friends__arrow-desktop friends__arrow-right" src="./assets/svg/arrow-right.svg" alt="arrow-right">
         </div>
         <div class="friends__arrows-mobile">
-          <img class="friends__arrow friends__arrow-mobile" src="./assets/svg/arrow-right.svg" alt="arrow-right">
-          <img class="friends__arrow friends__arrow-mobile" src="./assets/svg/arrow-left.svg" alt="arrow-left">
+          <img class="friends__arrow friends__arrow-mobile friends__arrow-mobileleft" src="./assets/svg/arrow-left.svg" alt="arrow-left">
+          <img class="friends__arrow friends__arrow-mobile friends__arrow-mobileright" src="./assets/svg/arrow-right.svg" alt="arrow-right">
         </div>
-        <a href="#" class="friends__button button-link">Get to know the rest</a>
+        <a href="./pets.html" class="friends__button button-link">Get to know the rest</a>
       </div>
     </section>
 
-    <section class="help section">
+    <section id="help" class="help section">
       <div class="help__container container">
         <h3 class="help__heading section__heading">How you can help <br> our shelter</h3>
         <div class="help__slider-box">
@@ -154,7 +141,7 @@
 
   </div>
 
-  <script src="dist/main.js"></script>
+  <!-- <script src="./main.js"></script> -->
 </body>
 
 </html>

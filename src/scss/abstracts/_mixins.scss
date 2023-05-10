@@ -10,6 +10,12 @@
   }
 }
 
+@mixin desktop($min: 1280px) {
+  @media screen and (min-width: $min) {
+    @content;
+  }
+}
+
 @mixin heading() {
   font-family: $heading-font;
   font-weight: 400;

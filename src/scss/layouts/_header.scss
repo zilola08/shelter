@@ -4,8 +4,8 @@ $header-padding-top: 30px;
 .header {
   position: absolute;
   width: 100%;
-  // height: $header-height;
   padding-top: $header-padding-top;
+  padding-bottom: $header-padding-top;
   @include flex();
   @include text();
   color: $text-color_header;
@@ -33,8 +33,80 @@ $header-padding-top: 30px;
 
     @include mobile() {
       display: block;
+      position: absolute;
+      cursor: pointer;
+      z-index: 13;
+      width: 30px;
+      height: 22px;
+      align-self: flex-end;
+      margin-right: 20px;
+      // margin-top: 50p/x;
+      right: 0;
+      top: 50px;
+      transform: rotate(0deg);
+      transition: transform 800ms ease-out;
     }
   }
+
+  .navbar-burger.shown {
+    //slide-in animation
+    transform: translateX(-766px);
+    transition: transform 800ms ease-out;
+    z-index: 12;
+  }
+
+  &__burger-icon.shown {
+    transform: rotate(90deg);
+    transition: transform 800ms ease-out;
+  }
+
+  .navbar-burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: fixed;
+    top: 0;
+    right: -766px;
+    width: 320px;
+    height: 100vh;
+    background-color: #333B41;
+    z-index: 12;
+    // slide-out animation
+    transform: translateX(+766px);
+    transition: transform 800ms ease-in-out;
+
+    @include desktop() {
+      display: none;
+    }
+  }
+
+  .navbar-burger-ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .nav-burger-link {
+    line-height: 160%;
+    color: #CDCDCD;
+    text-decoration: none;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .navlist__navlink_active {
+    @include mobile() {
+      color: white;
+    }
+  }
+
 }
 
 .navbrand {
@@ -68,4 +140,24 @@ $header-padding-top: 30px;
     border-bottom: 3px #F1CDB3 solid;
     padding-bottom: 2px;
   }
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay.shown {
+  display: block;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }

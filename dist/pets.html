@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="dist/pets.css">
+  <link rel="stylesheet" href="./pets.css">
 <script defer src="pets.js"></script><link href="pets.css" rel="stylesheet"></head>
 
 <body>
@@ -14,65 +14,22 @@
 
     <section class="friends section">
       <div class="friends__container container">
-        <h1 class="friends__heading section__heading">Our friends who <br> are looking for a house</h1>
+        <h3 class="friends__heading section__heading">Our friends who <br> are looking for a house</h3>
         <div class="friends__cards-box">
           <div class="friends__slider slider">
-            <div class="friends__slider-page">
-              <div class="friends__card slider__card">
-                <img src="./assets/img/pets-katrine.png" alt="">
-                <p class="slider-card__name">Katrine</p>
-                <a class="slider-card__button button-link" href="#">Learn more</a>
-              </div>
-              <div class="friends__card slider__card">
-                <img src="./assets/img/pets-jennifer.png" alt="">
-                <p class="slider-card__name">Jennifer</p>
-                <a class="slider-card__button button-link" href="#">Learn more</a>
-              </div>
-              <div class="friends__card slider__card">
-                <img src="./assets/img/pets-woody.png" alt="">
-                <p class="slider-card__name">Woody</p>
-                <a class="slider-card__button button-link" href="#">Learn more</a>
-              </div>
-              <div class="friends__card slider__card">
-                <img src="./assets/img/pets-sophia.png" alt="">
-                <p class="slider-card__name">Sophia</p>
-                <a class="slider-card__button button-link" href="#">Learn more</a>
-              </div>
-              <div class="friends__card slider__card">
-                <img src="./assets/img/pets-timmy.png" alt="">
-                <p class="friend-name">Timmy</p>
-                <a class="slider-card__button button-link" href="#">Learn more</a>
-              </div>
-              <div class="friends__card slider__card">
-                <img src="./assets/img/pets-charly.png" alt="">
-                <p class="friend-name">Charly</p>
-                <a class="slider-card__button button-link" href="#">Learn more</a>
-              </div>
-              <div class="friends__card slider__card">
-                <img src="./assets/img/pets-scarlet.png" alt="">
-                <p class="friend-name">Scarlett</p>
-                <a class="slider-card__button button-link" href="#">Learn more</a>
-              </div>
-              <div class="friends__card slider__card">
-                <img src="./assets/img/pets-freddie.png" alt="">
-                <p class="friend-name">Freddie</p>
-                <a class="slider-card__button button-link" href="#">Learn more</a>
-              </div>
-            </div>
           </div>
         </div>
         <div class="pages-nav">
-          <div class="pages-nav__item"><img src="./assets/svg/icon-pages-forward-right.svg" alt=""
-              class="pages-nav__forward-start"></div>
-          <div class="pages-nav__item"><img src="./assets/svg/icon-page-right.svg" alt="" class="pages-nav__page-prev">
-          </div>
-          <div class="pages-nav__item"><span class="page-number">1</span></div>
-          <div class="pages-nav__item"><img src="./assets/svg/icon-page-right.svg" alt="" class="pages-nav__page-next">
-          </div>
-          <div class="pages-nav__item"><img src="./assets/svg/icon-pages-forward-right.svg" alt=""
-              class="pages-nav__forward-end"></div>
+          <button class="pages-nav__item friends__arrow-start">&lt;&lt;</button>
+          <button class="pages-nav__item friends__arrow-prev">&lt;
+          </button>
+          <button class="pages-nav__item friends__page-number"><span class="page-number">1</span></button>
+          <button class="pages-nav__item friends__arrow-next">&gt;
+          </button>
+          <button class="pages-nav__item friends__arrow-end">&gt;&gt;</button>
         </div>
       </div>
+      <div class="overlay"></div>
     </section>
 
 

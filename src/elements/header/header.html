@@ -2,29 +2,48 @@
   <nav class="header__container">
 
     <div class="header__box">
-  
+
       <div class="navbrand">
-        <a class="navbrand__heading" href="#">Cozy House</a>
+        <a class="navbrand__heading" href="./main.html">Cozy House</a>
         <p class="navbrand__text">Shelter for pets in Boston</p>
       </div>
-  
+
       <ul class="navlist">
         <li class="navlist__item">
-          <a class="navlist__navlink main navlist__navlink_active" href="../dist/main.html">About the shelter</a>
+          <a class="navlist__navlink navlist__navlink_active main" href="#about">About the shelter</a>
         </li>
         <li class="navlist__item">
-          <a class="navlist__navlink pets" href="../dist/pets.html">Our pets</a>
+          <a class="navlist__navlink pets" href="#friends">Our pets</a>
         </li>
         <li class="navlist__item">
-          <a class="navlist__navlink help" href="#">Help the shelter</a>
+          <a class="navlist__navlink help" href="#help">Help the shelter</a>
         </li>
         <li class="navlist__item">
-          <a class="navlist__navlink contacts" href="#">Contacts</a>
+          <a class="navlist__navlink contacts" href="#contacts">Contacts</a>
         </li>
       </ul>
-  
+
       <img class="header__burger-icon" src="./assets/svg/icon-burger-menu.svg" alt="">
-  
+
     </div>
+
+    <!-- Burger Menu -->
+    <div class="navbar-burger">
+      <ul class="navbar-burger-ul">
+        <li class="nav-burger-item">
+          <a class="nav-burger-link navlist__navlink_active" href="#about">About</a>
+        </li>
+        <li class="nav-burger-item">
+          <a class="nav-burger-link" href="#friends">Our pets</a>
+        </li>
+        <li class="nav-burger-item">
+          <a class="nav-burger-link" href="#help">Help the shelter</a>
+        </li>
+        <li class="nav-burger-item">
+          <a class="nav-burger-link" href="#contacts">Contacts</a>
+        </li>
+      </ul>
+    </div>
+    <div class="overlay"></div>
   </nav>
 </header>
