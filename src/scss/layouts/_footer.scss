@@ -1,0 +1,79 @@
+.footer {
+  background: $bgcolor1;
+
+  &__container {
+    @include flex(space-between, flex-start, row);
+    padding: 40px 40px 0 40px;
+
+    @include tablet() {
+      flex-wrap: wrap;
+      padding: 15px 64px 0 64px;
+      row-gap: 57px;
+    }
+
+    @include mobile() {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 30px 10px 0 10px;
+    }
+  }
+
+  &__text {
+    margin-top: 15px;
+    gap: 45px;
+    width: max-content;
+
+    @include mobile() {
+      margin-top: 0px;
+    }
+  }
+
+  &__heading {
+    @include heading();
+    color: $text-color_header;
+
+    @include mobile() {
+      font-size: 25px;
+    }
+  }
+
+  &__img {
+    @include tablet() {
+      margin: 0 auto;
+    }
+
+    @include mobile() {
+      margin: 0 auto;
+      width: 260px;
+      height: 269px;
+    }
+  }
+
+  .contacts,
+  .address {
+    @include flex(flex-start, flex-start, column);
+    gap: 40px;
+
+    &__type {
+      @include flex();
+      gap: 20px;
+    }
+
+    &__text {
+      font-family: 'Georgia';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 115%;
+      letter-spacing: 0.06em;
+      color: #F1CDB3;
+    }
+  }
+
+  .address {
+    margin-top: -10px;
+    margin-right: 7px;
+    gap: 37px;
+  }
+}

@@ -1,0 +1,53 @@
+@mixin mobile($min: 319px, $max: 767px) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin tablet($min: 768px, $max: 1279px) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin heading() {
+  font-family: $heading-font;
+  font-weight: 400;
+  font-style: normal;
+  color: $heading-color;
+  letter-spacing: 0.06em;
+  line-height: 130%;
+}
+
+@mixin text() {
+  font-family: $text-font;
+  font-weight: 400;
+  font-style: normal;
+  font-size: $text-size;
+  color: $text-color_body;
+  letter-spacing: 0.06em;
+  line-height: 24px;
+}
+
+@mixin caption() {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: #545454;
+  text-align: center;
+}
+
+@mixin flex($justify: center, $align: flex-start, $flex-direction: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flex-direction;
+}
+
+@mixin grid2cols() {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
