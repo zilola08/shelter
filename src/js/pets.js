@@ -1,4 +1,4 @@
-window.onresize = function () { location.reload(); }
+// window.onresize = function () { location.reload(); }
 // import '../scss/main.scss';
 import '../scss/pets.scss';
 
